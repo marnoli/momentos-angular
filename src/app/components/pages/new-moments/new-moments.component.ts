@@ -12,4 +12,8 @@ export class NewMomentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  createHandler(event: any) {
+    console.log('deu boa')
+  }
+
 }
