@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Moment } from 'src/app/Moment';
-import { MomentService } from 'src/app/service/moment.service';
-import { MessageService } from 'src/app/service/message.service';
 import { Router } from '@angular/router';
+import { MomentService } from 'src/service/moment.service';
+import { MessageService } from 'src/service/message.service';
 
 @Component({
   selector: 'app-new-moments',
@@ -15,7 +15,7 @@ export class NewMomentsComponent implements OnInit {
   constructor(
     private momentService: MomentService,
     private messageService: MessageService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MomentService } from 'src/app/service/moment.service';
 import { Moment } from 'src/app/Moment';
 import { environment } from 'src/environments/environment';
+import { MomentService } from 'src/service/moment.service';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit {
   moments: Moment[] = []
   baseApiUrl = environment.baseApiUrl
 
-  //todo search
+  faSearch = faSearch
+  searchTerm: string = ''
 
   constructor(private momentService: MomentService) { }
 
@@ -31,4 +32,12 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  // Metodo para pegar eventos no input
+  search(event: Event): void {
+    const target = event.target as HTMLInputElement
+    const value = target.value
+    this.moments = this.allMoments.filter((moment) => {
+      return moment.title.toLowerCase().includes(value)
+    })
+  }
 }

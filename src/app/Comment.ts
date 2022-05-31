@@ -5,5 +5,4 @@ export interface Comment {
   momentId: number;
   created?: string;
   updated?: string;
-
 }

@@ -11,8 +11,9 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { NewMomentsComponent } from './components/pages/new-moments/new-moments.component';
 import { MomentFormComponent } from './components/moment-form/moment-form.component';
-import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MessagesComponent } from './components/message/messages.component';
+import { MomentComponent } from './components/pages/moment/moment.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NewMomentsComponent,
     MomentFormComponent,
     MessagesComponent,
+    MomentComponent,
   ],
   imports: [
     BrowserModule,
