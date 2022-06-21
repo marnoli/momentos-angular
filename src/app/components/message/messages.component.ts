@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { MessageService } from 'src/service/message.service';
 
-
-
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
